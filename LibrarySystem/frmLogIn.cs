@@ -16,6 +16,9 @@ namespace LibrarySystem
         {
             InitializeComponent();
             Library.PopulateEmployees();
+            Library.PopulateStudents();
+            Library.PopulateBooks();
+
         }
 
         private void BtnExit_Click(object sender, EventArgs e)
@@ -30,7 +33,11 @@ namespace LibrarySystem
             Console.WriteLine(v.Count().ToString());
             if(v.Count>0)
             {
-                MessageBox.Show("Successfull Log In");
+                frmMenu myForm = new frmMenu();
+                myForm.ShowDialog();
+
+                this.Close();
+
             }
             else
             {

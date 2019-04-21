@@ -29,5 +29,17 @@ namespace LibrarySystem
             this.Close();
 
         }
+
+        private void borrowToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBorrowBooks myForm = new frmBorrowBooks();
+            myForm.ShowDialog();
+        }
+
+        private void returnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReturn myForm = new frmReturn();
+            myForm.ShowDialog();
+        }
     }
 }

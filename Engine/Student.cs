@@ -22,5 +22,7 @@ namespace Engine
         public string Surname { get; set; }
         public string Gender { get; set; }
         public int Age { get; set; }
+
+        public List<StudentBooks> StudentBooks = new List<StudentBooks>();
     }
 }

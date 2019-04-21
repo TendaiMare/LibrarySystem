@@ -10,7 +10,7 @@ namespace Engine
     {
         public static readonly List<Book> Books = new List<Book>();
         public static readonly List<Employee> Employees = new List<Employee>();
-        public static readonly List<Student> Students = new List<Student>();
+        
 
         public static void PopulateBooks()
         {
@@ -39,6 +39,7 @@ namespace Engine
             Employees.Add(new Employee(4, "Edward", "Star", "Male", 25,"Eddy","Edward@123"));
             Employees.Add(new Employee(5, "Lisa", "Bundy", "Female", 49,"Lisa","Lisa@123"));
         }
+        public static readonly List<Student> Students = new List<Student>();
         public static void PopulateStudents()
         {
             Students.Add(new Student(1, "Monalisa", "Enerst", "Male", 23));
@@ -56,7 +57,6 @@ namespace Engine
             Students.Add(new Student(13, "Sthabile", "Gumede", "Female", 38));
             Students.Add(new Student(14, "Nobuhle", "Nehandiro", "Female", 54));
             Students.Add(new Student(15, "Tererai", "Mashava", "Female", 25));
-
         }
 
     }
