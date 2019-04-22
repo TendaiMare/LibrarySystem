@@ -15,6 +15,8 @@ namespace LibrarySystem
         public frmFineCheck()
         {
             InitializeComponent();
+
+
         }
     }
 }
