@@ -36,6 +36,8 @@
             this.borrowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.returnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button1 = new System.Windows.Forms.Button();
+            this.finesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fineCheckToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,7 +45,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.systemToolStripMenuItem,
-            this.booksToolStripMenuItem});
+            this.booksToolStripMenuItem,
+            this.finesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(666, 24);
@@ -105,6 +108,21 @@
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // finesToolStripMenuItem
+            // 
+            this.finesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fineCheckToolStripMenuItem});
+            this.finesToolStripMenuItem.Name = "finesToolStripMenuItem";
+            this.finesToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
+            this.finesToolStripMenuItem.Text = "Fines";
+            // 
+            // fineCheckToolStripMenuItem
+            // 
+            this.fineCheckToolStripMenuItem.Name = "fineCheckToolStripMenuItem";
+            this.fineCheckToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.fineCheckToolStripMenuItem.Text = "Fine Check";
+            this.fineCheckToolStripMenuItem.Click += new System.EventHandler(this.fineCheckToolStripMenuItem_Click);
+            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -133,5 +151,7 @@
         private System.Windows.Forms.ToolStripMenuItem borrowToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem returnToolStripMenuItem;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ToolStripMenuItem finesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fineCheckToolStripMenuItem;
     }
 }

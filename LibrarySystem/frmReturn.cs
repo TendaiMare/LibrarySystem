@@ -27,7 +27,7 @@ namespace LibrarySystem
             {
                 var myStudentBooks = Library.Students.
                     Find(s => s.ID == Convert.ToInt32(cboStudent.SelectedValue)).
-                    StudentBooks.ToList();
+                    studentBooks.ToList();
 
                  var myStudentBooksList = (from q in myStudentBooks select new BorrowedStudentBook() {Name=q.book.Name,ID= q.book.ID});
                                                
@@ -49,7 +49,7 @@ namespace LibrarySystem
             {
                 int bookid = Convert.ToInt32(cboBooks.SelectedValue);
 
-                var u = student.StudentBooks.Find(r => r.book.ID == bookid);
+                var u = student.studentBooks.Find(r => r.book.ID == bookid);
                 dtpDueDate.Value = u.DueDate;
 
                 if(dtpDueDate.Value<DateTime.Now)
@@ -65,18 +65,11 @@ namespace LibrarySystem
 
         private void BtnReturnBook_Click(object sender, EventArgs e)
         {
-
             var student = Library.Students.Find(d => d.ID == Convert.ToInt32(cboStudent.SelectedValue));
-            int bookid=0;
-            if (student != null)
-            {
-                  bookid = Convert.ToInt32(cboBooks.SelectedValue);
-
-                  var t = student.StudentBooks.Find(h => h.book.ID == bookid);
-
-                  var f = student.StudentBooks.Remove(t);
-            }       
-              
+            int bookid = Convert.ToInt32(cboBooks.SelectedValue);
+            var u = student.studentBooks.Find(r => r.book.ID == bookid);
+            student.ReturnBook(u);
+            student.FineCheckAndIssueFinesIfOverDue(u, DateTime.Now);              
         }
     }
 }

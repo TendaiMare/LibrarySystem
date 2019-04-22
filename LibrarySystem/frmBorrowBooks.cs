@@ -50,7 +50,7 @@ namespace LibrarySystem
                 if (myBook!=null)
                 {
                     StudentBooks myStudentBook = new StudentBooks(myBook, DateTime.Now.AddDays(7));
-                    myStudent.StudentBooks.Add(myStudentBook);
+                    myStudent.studentBooks.Add(myStudentBook);
                 }              
             }
 

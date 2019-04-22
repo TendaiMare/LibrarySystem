@@ -24,15 +24,7 @@ namespace Engine
         public decimal FineAmount
         {
             get 
-            {
-                _FineAmount = 0;
-                int DaysLate = (DateBookWasReturned - book.DueDate).Days;
-                if(DaysLate>=0)
-                {
-                    _FineAmount = DaysLate * PenaltyRate;
-                }
-                return _FineAmount;
-            }
+            {return _FineAmount;}
             private set { _FineAmount = value; }
         }
 
@@ -40,6 +32,12 @@ namespace Engine
         {
             book = _book;
             DateBookWasReturned = _returnDate;
+            FineAmount = GetFineAmount(book, _returnDate);            
         }
+
+        private decimal GetFineAmount(StudentBooks bk,DateTime rd)
+        {  
+           return (bk.DueDate - rd).Days * PenaltyRate;
+        }  
     }
 }

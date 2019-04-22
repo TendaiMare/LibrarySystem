@@ -41,5 +41,10 @@ namespace LibrarySystem
             frmReturn myForm = new frmReturn();
             myForm.ShowDialog();
         }
+
+        private void fineCheckToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
