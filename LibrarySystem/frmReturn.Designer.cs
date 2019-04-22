@@ -37,6 +37,10 @@
             this.BtnReturnBook = new System.Windows.Forms.Button();
             this.BtnClear = new System.Windows.Forms.Button();
             this.BtnCancel = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.TxtOverdueDays = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.TxtFineAmount = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -92,7 +96,7 @@
             // 
             // BtnReturnBook
             // 
-            this.BtnReturnBook.Location = new System.Drawing.Point(21, 185);
+            this.BtnReturnBook.Location = new System.Drawing.Point(21, 243);
             this.BtnReturnBook.Name = "BtnReturnBook";
             this.BtnReturnBook.Size = new System.Drawing.Size(129, 26);
             this.BtnReturnBook.TabIndex = 6;
@@ -102,7 +106,7 @@
             // 
             // BtnClear
             // 
-            this.BtnClear.Location = new System.Drawing.Point(174, 185);
+            this.BtnClear.Location = new System.Drawing.Point(174, 243);
             this.BtnClear.Name = "BtnClear";
             this.BtnClear.Size = new System.Drawing.Size(104, 25);
             this.BtnClear.TabIndex = 7;
@@ -111,18 +115,56 @@
             // 
             // BtnCancel
             // 
-            this.BtnCancel.Location = new System.Drawing.Point(301, 186);
+            this.BtnCancel.Location = new System.Drawing.Point(301, 244);
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Size = new System.Drawing.Size(104, 25);
             this.BtnCancel.TabIndex = 8;
             this.BtnCancel.Text = "Cancel";
             this.BtnCancel.UseVisualStyleBackColor = true;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(26, 162);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(143, 13);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Overdue by How Many Days";
+            // 
+            // TxtOverdueDays
+            // 
+            this.TxtOverdueDays.Location = new System.Drawing.Point(188, 155);
+            this.TxtOverdueDays.Name = "TxtOverdueDays";
+            this.TxtOverdueDays.Size = new System.Drawing.Size(187, 20);
+            this.TxtOverdueDays.TabIndex = 10;
+            this.TxtOverdueDays.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(29, 197);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(27, 13);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Fine";
+            // 
+            // TxtFineAmount
+            // 
+            this.TxtFineAmount.Location = new System.Drawing.Point(188, 197);
+            this.TxtFineAmount.Name = "TxtFineAmount";
+            this.TxtFineAmount.Size = new System.Drawing.Size(187, 20);
+            this.TxtFineAmount.TabIndex = 12;
+            this.TxtFineAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // frmReturn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(433, 242);
+            this.ClientSize = new System.Drawing.Size(433, 318);
+            this.Controls.Add(this.TxtFineAmount);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.TxtOverdueDays);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.BtnCancel);
             this.Controls.Add(this.BtnClear);
             this.Controls.Add(this.BtnReturnBook);
@@ -151,5 +193,9 @@
         private System.Windows.Forms.Button BtnReturnBook;
         private System.Windows.Forms.Button BtnClear;
         private System.Windows.Forms.Button BtnCancel;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox TxtOverdueDays;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox TxtFineAmount;
     }
 }

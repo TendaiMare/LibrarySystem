@@ -48,7 +48,19 @@ namespace LibrarySystem
             if(student!=null)
             {
                 int bookid = Convert.ToInt32(cboBooks.SelectedValue);
+
+                var u = student.StudentBooks.Find(r => r.book.ID == bookid);
+                dtpDueDate.Value = u.DueDate;
+
+                if(dtpDueDate.Value<DateTime.Now)
+                {                  
+                    TxtOverdueDays.Text = (DateTime.Now - dtpDueDate.Value).Days.ToString();
+
+                }
+
             }
+
+
         }
 
         private void BtnReturnBook_Click(object sender, EventArgs e)
