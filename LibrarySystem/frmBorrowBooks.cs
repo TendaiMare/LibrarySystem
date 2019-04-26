@@ -20,7 +20,7 @@ namespace LibrarySystem
             cboStudent.DisplayMember = "Name";
             cboStudent.ValueMember = "ID";
 
-            cboBook.DataSource = Library.Books;
+            cboBook.DataSource = Library.Books.Where(s=>s.Quantity>0).ToList();
             cboBook.DisplayMember = "Name";
             cboBook.ValueMember = "ID";
 
@@ -49,14 +49,17 @@ namespace LibrarySystem
             {               
                 if (myBook!=null)
                 {
-                    StudentBooks myStudentBook = new StudentBooks(myBook, DateTime.Now.AddDays(7));
-                    myStudent.studentBooks.Add(myStudentBook);
+                    if(myStudent.BorrowBook(myBook)==false)
+                    {
+                        MessageBox.Show("This book is out of stock");
+                    }
                 }              
             }
 
-
-
+            cboBook.DataSource = Library.Books.Where(s => s.Quantity > 0).ToList();
+            cboBook.DisplayMember = "Name";
+            cboBook.ValueMember = "ID";
+           
         }
-
     }
 }

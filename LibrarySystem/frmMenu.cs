@@ -44,7 +44,8 @@ namespace LibrarySystem
 
         private void fineCheckToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmFineCheck myForm = new frmFineCheck();
+            myForm.ShowDialog();
         }
     }
 }

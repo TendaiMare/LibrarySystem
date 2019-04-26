@@ -57,10 +57,7 @@ namespace LibrarySystem
                     TxtOverdueDays.Text = (DateTime.Now - dtpDueDate.Value).Days.ToString();
 
                 }
-
             }
-
-
         }
 
         private void BtnReturnBook_Click(object sender, EventArgs e)
@@ -68,8 +65,7 @@ namespace LibrarySystem
             var student = Library.Students.Find(d => d.ID == Convert.ToInt32(cboStudent.SelectedValue));
             int bookid = Convert.ToInt32(cboBooks.SelectedValue);
             var u = student.studentBooks.Find(r => r.book.ID == bookid);
-            student.ReturnBook(u);
-            student.FineCheckAndIssueFinesIfOverDue(u, DateTime.Now);              
+            student.ReturnBook(u,DateTime.Now);
         }
     }
 }

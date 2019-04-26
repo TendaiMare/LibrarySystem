@@ -7,30 +7,24 @@ using System.Threading.Tasks;
 namespace Engine
 {
     public  class Library
-    {
-       
+    {       
         public static readonly List<Book> Books = new List<Book>();
-        public static readonly List<Employee> Employees = new List<Employee>();
-        
-
+        public static readonly List<Employee> Employees = new List<Employee>();     
         public static void PopulateBooks()
         {
-            
-
-            Books.Add(new Book(1,"Mpho Search","Gilbert"));
-            Books.Add(new Book(2,"The Holy Bible","NIV"));
-            Books.Add(new Book(3,"c# in depth","The # Masters"));
-            Books.Add(new Book(4,"The Holy Grail","Charlie Stout"));
-            Books.Add(new Book(5,"Nice Cars","Jon Lewi"));
-            Books.Add(new Book(6, "Java Unravelled", "Tauris"));
-            Books.Add(new Book(7, "How to bake", "Candy Frew"));
-            Books.Add(new Book(8, "Swimming in deep Water", "Matt Deq"));
-            Books.Add(new Book(9, "Lovers dating Tips", "Margaret Flir"));
-            Books.Add(new Book(10, "Mangos in Summer", "Struff"));
-            Books.Add(new Book(11, "Music to the heart", "Billy"));
-            Books.Add(new Book(12, "Sleep walking", "Bob Chiffy"));
-            Books.Add(new Book(13, "Zen lifestyle", "Viltip Qwerty"));
-
+            Books.Add(new Book(1, "Mpho Search", "Gilbert",4));
+            Books.Add(new Book(2, "The Holy Bible", "NIV",5));
+            Books.Add(new Book(3, "c# in depth", "The # Masters",2));
+            Books.Add(new Book(4, "The Holy Grail", "Charlie Stout",1));
+            Books.Add(new Book(5, "Nice Cars", "Jon Lewi",3));
+            Books.Add(new Book(6, "Java Unravelled", "Tauris",5));
+            Books.Add(new Book(7, "How to bake", "Candy Frew",2));
+            Books.Add(new Book(8, "Swimming in deep Water", "Matt Deq",1));
+            Books.Add(new Book(9, "Lovers dating Tips", "Margaret Flir",2));
+            Books.Add(new Book(10, "Mangos in Summer", "Struff",3));
+            Books.Add(new Book(11, "Music to the heart", "Billy",4));
+            Books.Add(new Book(12, "Sleep walking", "Bob Chiffy",5));
+            Books.Add(new Book(13, "Zen lifestyle", "Viltip Qwerty",3));
         }
         public static void PopulateEmployees()
         {
@@ -59,6 +53,5 @@ namespace Engine
             Students.Add(new Student(14, "Nobuhle", "Nehandiro", "Female", 54));
             Students.Add(new Student(15, "Tererai", "Mashava", "Female", 25));
         }
-
     }
 }

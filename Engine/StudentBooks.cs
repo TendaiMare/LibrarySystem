@@ -10,10 +10,14 @@ namespace Engine
     {
         public Book book { get; set; }
         public DateTime DueDate { get; set; }
-        public StudentBooks(Book _book, DateTime _dueDate)
+
+        public bool Returned { get; set; }
+        public DateTime ReturnDate { get; set; }
+        public StudentBooks(Book _book, DateTime _dueDate,bool _returned)
         {
             book = _book;
             DueDate = _dueDate;
-        }
+            Returned = _returned;
+        }        
     }
 }
